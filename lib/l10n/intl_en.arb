@@ -1,0 +1,9 @@
+{
+  "explore": "Explore",
+  "feed": "Feed",
+  "profile": "Profile",
+  "noInternetConnection": "No internet connection.",
+  "oopsSomethingWentWrong": "Oops Something went wrong",
+  "oopsNoResultsFound": "Oops, No results found!",
+  "somethingWentWrong": "Something went wrong! Please try after some time."
+}
