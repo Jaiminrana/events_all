@@ -28,6 +28,7 @@ dependencies:
 
   intl: 0.18.0
   sprintf: ^7.0.0
+  webview_flutter: 4.5.0
 
 dev_dependencies:
   flutter_test:

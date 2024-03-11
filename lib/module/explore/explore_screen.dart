@@ -45,10 +45,16 @@ class ExploreScreen extends StatelessWidget {
                 icon: Vectors.calendar,
                 title: 'Date & Time',
               ),
-              const AEIconTile(
-                icon: Vectors.sort,
-                title: 'Sort',
-              ),
+              Observer(builder: (context) {
+                return AEIconTile(
+                  icon: Vectors.sort,
+                  title: store.view,
+                  onTap: store.onToggleView,
+                  titleColor: store.isGridView
+                      ? AppColors.blueColor
+                      : AppColors.blackFontColor,
+                );
+              }),
             ],
           ),
         ),
@@ -57,6 +63,7 @@ class ExploreScreen extends StatelessWidget {
             return AeEventListView(
               networkState: store.eventState,
               eventList: store.eventList,
+              isGridView: store.isGridView,
             );
           }),
         ),

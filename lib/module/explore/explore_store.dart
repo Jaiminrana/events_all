@@ -19,6 +19,9 @@ abstract class _ExploreStore with Store {
   final debounce = Debounce();
 
   @observable
+  bool isGridView = false;
+
+  @observable
   String currentCategory = 'All';
 
   @observable
@@ -28,6 +31,9 @@ abstract class _ExploreStore with Store {
 
   @computed
   bool get isAllCategory => currentCategory == 'All';
+
+  @computed
+  String get view => isGridView ? 'GridView' : 'ListView';
 
   Future<void> getEventDetailsList() async {
     debounce.run(() async {
@@ -54,5 +60,9 @@ abstract class _ExploreStore with Store {
   void onChangeCategory(String category) {
     currentCategory = category;
     getEventDetailsList();
+  }
+
+  void onToggleView() {
+    isGridView = !isGridView;
   }
 }
