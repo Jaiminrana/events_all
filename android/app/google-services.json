@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "533030828251",
+    "project_id": "allevent-c06f7",
+    "storage_bucket": "allevent-c06f7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:533030828251:android:13cf8d3f76cc5da7bc74fe",
+        "android_client_info": {
+          "package_name": "com.example.events_all"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "533030828251-9spfgfdeah91uvn7lnisq0cuhoq13s33.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.events_all",
+            "certificate_hash": "589b716b2333298d79086d3078e7780565fcd75a"
+          }
+        },
+        {
+          "client_id": "533030828251-4ohci1n71pup1je8fjtdn47i4hg2ui7i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrTzQJIXy_yJKjCErY6qsQrEYsb7tP5_4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "533030828251-4ohci1n71pup1je8fjtdn47i4hg2ui7i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -39,16 +39,16 @@ class AENetworkImage extends StatelessWidget {
         imageUrl: url,
         errorWidget: (_, __, error) {
           debugPrint(error.toString());
-          return const PlaceHolder();
+          return const AePlaceHolder();
         },
-        placeholder: (_, __) => const Placeholder(),
+        placeholder: (_, __) => const AePlaceHolder(),
       ),
     );
   }
 }
 
-class PlaceHolder extends StatelessWidget {
-  const PlaceHolder({super.key});
+class AePlaceHolder extends StatelessWidget {
+  const AePlaceHolder({super.key});
 
   @override
   Widget build(BuildContext context) {

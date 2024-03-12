@@ -3,7 +3,6 @@ import 'package:events_all/generated/l10n.dart';
 import 'package:events_all/model/event_detail_dm.dart';
 import 'package:events_all/services/SnackbarService.dart';
 import 'package:events_all/values/enumerations.dart';
-import 'package:flutter/material.dart';
 import 'package:mobx/mobx.dart';
 
 part 'feed_store.g.dart';
@@ -33,7 +32,6 @@ abstract class _FeedStore with Store {
         throw Exception();
       }
     } catch (e) {
-      debugPrint('Error $e');
       eventState = NetworkState.error;
       SnackbarService.showSnack(Str.current.oopsSomethingWentWrong);
     }

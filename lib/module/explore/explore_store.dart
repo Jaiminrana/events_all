@@ -4,7 +4,6 @@ import 'package:events_all/model/event_detail_dm.dart';
 import 'package:events_all/services/SnackbarService.dart';
 import 'package:events_all/utils/debouncer.dart';
 import 'package:events_all/values/enumerations.dart';
-import 'package:flutter/foundation.dart';
 import 'package:mobx/mobx.dart';
 
 part 'explore_store.g.dart';
@@ -22,7 +21,7 @@ abstract class _ExploreStore with Store {
   bool isGridView = false;
 
   @observable
-  String currentCategory = 'All';
+  String currentCategory = Str.current.all;
 
   @observable
   NetworkState eventState = NetworkState.idle;
@@ -30,10 +29,10 @@ abstract class _ExploreStore with Store {
   ObservableList<EventDetailDm> eventList = ObservableList();
 
   @computed
-  bool get isAllCategory => currentCategory == 'All';
+  bool get isAllCategory => currentCategory == Str.current.all;
 
   @computed
-  String get view => isGridView ? 'GridView' : 'ListView';
+  String get view => isGridView ? Str.current.gridView : Str.current.listView;
 
   Future<void> getEventDetailsList() async {
     debounce.run(() async {
@@ -49,7 +48,6 @@ abstract class _ExploreStore with Store {
           throw Exception();
         }
       } catch (e) {
-        debugPrint('Error ->> $e}');
         eventState = NetworkState.error;
         SnackbarService.showSnack(Str.current.oopsSomethingWentWrong);
       }

@@ -1,5 +1,6 @@
 import 'package:events_all/model/event_detail_dm.dart';
 import 'package:events_all/utils/common%20widgets/ae_network_Image.dart';
+import 'package:events_all/utils/typedefs.dart';
 import 'package:events_all/values/app_constant.dart';
 import 'package:flutter/material.dart';
 
@@ -7,9 +8,11 @@ class AEEventGridView extends StatelessWidget {
   const AEEventGridView({
     super.key,
     required this.eventList,
+    this.onTap,
   });
 
   final List<EventDetailDm> eventList;
+  final EventCallBack? onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -25,10 +28,16 @@ class AEEventGridView extends StatelessWidget {
         final url = eventList[index].bannerUrl;
         return url == null
             ? const SizedBox.shrink()
-            : AENetworkImage(
-                url: url,
-                borderRadius:
-                    const BorderRadius.all(AppConstant.roundedBorder10),
+            : GestureDetector(
+                onTap: () => onTap?.call(
+                  eventList[index].eventUrl,
+                  eventList[index].eventName,
+                ),
+                child: AENetworkImage(
+                  url: url,
+                  borderRadius:
+                      const BorderRadius.all(AppConstant.roundedBorder10),
+                ),
               );
       },
     );

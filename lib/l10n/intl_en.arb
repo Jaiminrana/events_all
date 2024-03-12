@@ -5,5 +5,14 @@
   "noInternetConnection": "No internet connection.",
   "oopsSomethingWentWrong": "Oops Something went wrong",
   "oopsNoResultsFound": "Oops, No results found!",
-  "somethingWentWrong": "Something went wrong! Please try after some time."
+  "somethingWentWrong": "Something went wrong! Please try after some time.",
+  "logOut": "LogOut",
+  "user": "User",
+  "eventAll": "EventsAll",
+  "googleSignIn": "Google SignIn",
+  "category": "Category",
+  "dateTime": "Date & Time",
+  "all": "All",
+  "listView": "ListView",
+  "gridView": "GridView"
 }

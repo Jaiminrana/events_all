@@ -1,3 +1,4 @@
+import 'package:events_all/generated/l10n.dart';
 import 'package:events_all/module/category_sheet.dart';
 import 'package:events_all/module/explore/explore_store.dart';
 import 'package:events_all/resources/resources.dart';
@@ -36,14 +37,15 @@ class ExploreScreen extends StatelessWidget {
                     store: store,
                   ),
                   icon: Vectors.category,
-                  title:
-                      store.isAllCategory ? 'Category' : store.currentCategory,
+                  title: store.isAllCategory
+                      ? Str.current.category
+                      : store.currentCategory,
                   titleColor: store.isAllCategory ? null : AppColors.blueColor,
                 );
               }),
-              const AEIconTile(
+              AEIconTile(
                 icon: Vectors.calendar,
-                title: 'Date & Time',
+                title: Str.current.dateTime,
               ),
               Observer(builder: (context) {
                 return AEIconTile(
@@ -76,7 +78,7 @@ class ExploreScreen extends StatelessWidget {
     required ExploreStore store,
   }) {
     AEBottomSheet(
-      title: 'Category',
+      title: Str.current.category,
       backGroundColor: AppColors.whiteColor,
       childFit: FlexFit.tight,
       child: const CategorySheet().wwithProviderValue(store),

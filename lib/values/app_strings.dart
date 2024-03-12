@@ -6,4 +6,5 @@ class AppStrings {
   static const String blankString = ' ';
   static const String nextLine = '\n';
   static const String logErrorPattern = 'Error: %s';
+  static const String userString = '%s :- %s';
 }
